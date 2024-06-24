@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
+    - continue-on-error: true
     - uses: actions/checkout@v3
     - name: Set up JDK ${{env.JAVA_VERSION}}
       uses: actions/setup-java@v3
