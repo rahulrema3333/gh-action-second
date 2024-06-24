@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: understanding matrix include and exlude
         run: |
-          echo  "version is": ${{ matrix.version }}
+          echo  "version iss": ${{ matrix.version }}
           echo  "os is" ${{ matrix.os }}
       
       
