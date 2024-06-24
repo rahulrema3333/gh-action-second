@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         pet: [cat, dog]
-        color: [pink, brown]
+        color: [pink, brown, white]
         include:
           - color: white
             pet: dog
