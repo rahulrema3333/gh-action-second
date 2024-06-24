@@ -5,25 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        fruit: [apple, pear]
-        animal: [cat, dog]
+        pet: [cat, dog]
+        color: [pink, brown]
         include:
-          - color: green
-          - color: pink
-            animal: cat
-          - fruit: apple
-            shape: circle
-          - fruit: banana
-          - fruit: banana
-            animal: cat
+          - color: white
+            pet: dog
               
     steps:
-      - name: understanding matrix include and exlude
-        run: |
-          echo  "fruit is": ${{ matrix.fruit }}
-          echo  "animal is" ${{ matrix.animal }}
-          echo  "color is" ${{ matrix.color }}
-          echo  "shape is" ${{ matrix.shape }}
+      - run: echo "Hello ${{ matrix.color }} ${{ matrix.pet }}"
       
       
         
