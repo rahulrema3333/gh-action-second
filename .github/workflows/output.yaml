@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-    - continue-on-error: true
     - uses: actions/checkout@v3
     - name: Set up JDK ${{env.JAVA_VERSION}}
       uses: actions/setup-java@v3
@@ -23,6 +22,7 @@ jobs:
         java-version: ${{env.JAVA_VERSION}}
         distribution: 'temurin'
         cache: maven
+      continue-on-error: true
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Print name
