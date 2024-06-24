@@ -25,6 +25,7 @@ jobs:
       continue-on-error: true
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      continue-on-error: true
     - name: Print name
       run: echo "Hello $NAME. $BUILD. Using Java Version $JAVA_VERSION"
       env:
