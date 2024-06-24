@@ -5,13 +5,25 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [10, 12, 14]
-        os: [ubuntu-latest, windows-latest]
+        fruit: [apple, pear]
+        animal: [cat, dog]
+        include:
+          - color: green
+          - color: pink
+            animal: cat
+          - fruit: apple
+            shape: circle
+          - fruit: banana
+          - fruit: banana
+            animal: cat
+              
     steps:
       - name: understanding matrix include and exlude
         run: |
-          echo  "version iss": ${{ matrix.version }}
-          echo  "os is" ${{ matrix.os }}
+          echo  "fruit is": ${{ matrix.fruit }}
+          echo  "animal is" ${{ matrix.animal }}
+          echo  "color is" ${{ matrix.color }}
+          echo  "shape is" ${{ matrix.shape }}
       
       
         
